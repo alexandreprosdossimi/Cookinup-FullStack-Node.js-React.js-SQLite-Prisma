@@ -1,0 +1,26 @@
+{
+  "name": "cookinup-backend",
+  "version": "1.0.0",
+  "description": "API do CookinUp para categorias e ingredientes",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "db:setup": "prisma generate && prisma migrate deploy && prisma db seed"
+  },
+  "keywords": ["cookinup", "express", "prisma", "sqlite"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.19.3",
+    "nodemon": "^3.1.14",
+    "prisma": "^6.19.3"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  }
+}
